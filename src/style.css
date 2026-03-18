@@ -1,0 +1,83 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  background: radial-gradient(1000px 600px at 50% 30%, #141024 0%, #05040a 55%, #020106 100%);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  position: relative;
+}
+
+canvas {
+  display: block;
+}
+
+/* Top text styling */
+.top-text {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #FFD700;
+  font-family: 'Arial', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: 2px solid #FFD700;
+  backdrop-filter: blur(5px);
+  white-space: nowrap;
+  animation: textPulse 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Reassemble button styling */
+.reassemble-btn {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #0a0a1a;
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  background: #FFD700;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+  border: 2px solid #FFD700;
+}
+
+.reassemble-btn:hover {
+  background: #FFA500;
+  color: #000;
+  transform: translateX(-50%) scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+}
+
+.reassemble-btn:active {
+  transform: translateX(-50%) scale(0.95);
+}
+
+@keyframes textPulse {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+    border-color: #FFD700;
+  }
+  50% {
+    text-shadow: 0 0 40px rgba(255, 215, 0, 1);
+    border-color: #FFA500;
+  }
+}
